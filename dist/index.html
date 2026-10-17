@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="교실에서 바로 여는 수학 연습 도구 허브" />
+    <title>수업 도구 — 생각을 키우는 작은 연습</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="global-nav wrap" aria-label="주 메뉴">
+        <a class="brand" href="#top" aria-label="수업 도구 홈">
+          <span class="brand-mark" aria-hidden="true">수<span>·</span></span>
+          <span>수업 도구</span>
+        </a>
+        <a class="nav-link" href="#tools">도구 둘러보기</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <p class="eyebrow">선생님을 위한 작은 도구 모음</p>
+        <h1 id="hero-title">수업에 바로 쓰는<br /><span>생각하는 즐거움.</span></h1>
+        <p class="intro">설치 없이 열고, 필요한 연습을 바로 시작하세요.</p>
+
+        <div class="math-art" aria-hidden="true">
+          <span class="math-symbol symbol-times">×</span>
+          <span class="math-tile tile-eight">8</span>
+          <span class="math-equals">=</span>
+          <span class="math-tile tile-seven">7</span>
+          <span class="math-question">?</span>
+          <span class="math-symbol symbol-divide">÷</span>
+          <span class="art-dot dot-blue"></span>
+          <span class="art-dot dot-orange"></span>
+        </div>
+      </section>
+
+      <section class="tools-section" id="tools" aria-labelledby="tools-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">나의 도구</p>
+              <h2 id="tools-title">무엇을 연습할까요?</h2>
+            </div>
+            <p class="section-note">새로운 도구가 생기면 이곳에서 열 수 있어요.</p>
+          </div>
+
+          <div class="tool-grid" id="tool-list">
+            <article class="tool-card">
+              <div class="tool-card-top">
+                <span class="tool-label">초등 3~4학년</span>
+                <span class="tool-number">01</span>
+              </div>
+              <h3>수학 문제 연습</h3>
+              <p>곱셈과 나눗셈 문제를 한 문제씩 풀고 바로 확인해요.</p>
+              <div class="tool-art" aria-hidden="true">
+                <span>8</span><i>×</i><span>7</span><b>= ?</b>
+              </div>
+              <div class="tool-card-bottom">
+                <span>10문제 · 기록 저장 없음</span>
+                <button class="round-button" id="start-practice" aria-label="수학 문제 연습 시작">↗</button>
+              </div>
+            </article>
+            <article class="tool-card">
+              <div class="tool-card-top">
+                <span class="tool-label">문서 도구</span>
+                <span class="tool-number">02</span>
+              </div>
+              <h3>PDF 글자 수 세기</h3>
+              <p>PDF에서 텍스트를 읽어 글자 수와 단어 수를 바로 확인해요.</p>
+              <div class="tool-art pdf-art" aria-hidden="true">
+                <span>PDF</span><i>→</i><b>가나다</b>
+              </div>
+              <div class="tool-card-bottom">
+                <span>파일·결과를 저장하거나 전송하지 않음</span>
+                <button class="round-button" id="start-pdf-counter" aria-label="PDF 글자 수 세기 시작">↗</button>
+              </div>
+            </article>
+          </div>
+          <p class="future-note">앞으로 만들 프로그램의 바로가기를 이 목록에 추가할 수 있습니다.</p>
+        </div>
+      </section>
+
+      <section class="how-section wrap" aria-labelledby="how-title">
+        <div>
+          <p class="eyebrow">수학 연습</p>
+          <h2 id="how-title">한 문제씩,<br /><span>나만의 속도로.</span></h2>
+          <p class="how-copy">곱셈과 나눗셈을 섞어 열 문제를 풀어요. 매 문제마다 정답을 확인하고, 끝에서 오늘의 점수를 볼 수 있어요.</p>
+          <button class="text-link" data-start-practice>연습 시작하기 <span>›</span></button>
+        </div>
+        <ol class="steps">
+          <li><span>01</span><div><strong>바로 시작</strong><p>이름이나 설정 없이 문제를 열어요.</p></div></li>
+          <li><span>02</span><div><strong>생각하고 답하기</strong><p>곱셈은 한 칸, 나눗셈은 몫과 나머지를 입력해요.</p></div></li>
+          <li><span>03</span><div><strong>결과 확인</strong><p>열 문제를 마치면 점수를 화면에서 확인해요.</p></div></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-content">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">수<span>·</span></span><span>수업 도구</span></a>
+        <span>교실에서 바로 쓰는 작은 연습.</span>
+        <small>학생 이름과 풀이 기록은 저장하지 않습니다.</small>
+      </div>
+    </footer>
+
+    <dialog id="practice-dialog" aria-labelledby="dialog-title">
+      <button class="close-button" type="button" aria-label="연습 닫기">×</button>
+      <div id="practice-content"></div>
+    </dialog>
+
+    <dialog id="pdf-dialog" aria-labelledby="pdf-dialog-title">
+      <button class="close-button" id="close-pdf-dialog" type="button" aria-label="PDF 도구 닫기">×</button>
+      <div class="pdf-tool">
+        <p class="eyebrow">문서 도구</p>
+        <h2 id="pdf-dialog-title">PDF 글자 수 세기</h2>
+        <p class="pdf-intro">PDF에 들어 있는 텍스트를 읽어 글자 수를 계산합니다. 스캔한 이미지 PDF는 글자를 인식하지 못할 수 있어요.</p>
+        <label class="drop-zone" id="pdf-drop-zone" for="pdf-file">
+          <span class="drop-icon" aria-hidden="true">↑</span>
+          <strong>PDF 파일을 선택하거나 여기에 놓으세요</strong>
+          <span>PDF · 최대 100MB</span>
+          <input id="pdf-file" type="file" accept="application/pdf,.pdf" />
+        </label>
+        <p class="pdf-status" id="pdf-status" role="status" aria-live="polite">파일을 선택하면 이 기기에서 분석합니다.</p>
+        <section class="pdf-results" id="pdf-results" aria-live="polite" hidden>
+          <div class="pdf-result-heading"><span>분석 결과</span><button class="text-button" id="clear-pdf" type="button">지우기</button></div>
+          <p class="pdf-file-name" id="pdf-file-name"></p>
+          <div class="pdf-stat-grid">
+            <div class="pdf-stat pdf-stat-primary"><span>글자 수 (공백 포함)</span><strong id="count-with-spaces">0</strong></div>
+            <div class="pdf-stat"><span>글자 수 (공백 제외)</span><strong id="count-without-spaces">0</strong></div>
+            <div class="pdf-stat"><span>단어 수</span><strong id="count-words">0</strong></div>
+            <div class="pdf-stat"><span>페이지 수</span><strong id="count-pages">0</strong></div>
+          </div>
+          <p class="pdf-empty-note" id="pdf-empty-note" hidden>텍스트를 찾지 못했습니다. 이미지로 된 스캔 문서는 OCR이 필요합니다.</p>
+        </section>
+        <aside class="privacy-note">
+          <strong>개인정보 안내</strong>
+          <p>PDF 파일과 추출한 글자는 이 기기의 브라우저 안에서만 처리됩니다. 서버로 보내거나 저장하지 않습니다. PDF.js 분석 도구는 CDN에서 불러오므로 처음 사용할 때 인터넷 연결이 필요합니다.</p>
+        </aside>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

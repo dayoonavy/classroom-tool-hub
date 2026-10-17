@@ -1,0 +1,1 @@
+{"name":"classroom-tool-hub","private":true,"scripts":{"start":"node server.cjs","check":"node --check dist/app.js && node --check server.cjs"}}
